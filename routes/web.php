@@ -46,3 +46,33 @@ Route::get('/begin6/{a}/{b}/{c}', function($a,$b,$c){
    $s=2*($a*$b+$b*$c+$a*$c);
     return 'To`la sirt:'.$s."<br> Hajmi:".$v;
 });
+
+Route::get('/begin7/{r}', function($r){
+    $l=2*pi()*$r;
+    $s=pi()*pow($r,2);
+     return 'Uzunligi : '.$l."<br> Yuzasi : ".$s;
+ });
+
+ Route::get('/begin8/{a}/{b}', function($a,$b){
+    $p=($a+$b)/2;
+  
+    return "O`rta arifmetik : ".$p;
+
+});
+
+Route::get('/begin9/{a}/{b}', function($a,$b){
+    $p=sqrt($a+$b);
+  
+    return "O`rta geometrk : ".$p;
+
+});
+
+Route::get('/begin10/{a}/{b}', function($a,$b){
+    $x = $a + $b;
+    $y = $a * $b;
+    $a=$a*$a;
+    $b=$b*$b;  
+    return "Yig`indisi : ".$x. '<br> Ko`paytmasi : '. $y. "<br> Har bir sonning kvadrati:".$a."<br>".$b;
+
+});
+
