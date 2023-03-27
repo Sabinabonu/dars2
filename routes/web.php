@@ -139,4 +139,154 @@ Route::get('/int10/{n}', function($n){
     return "O'nliklar Homasidagi son=". $a."<br>Birliklar honasidagi son=".$b;
 });
 
+Route::get('/if1/{n}', function($n){
+    if($n>0){
+        $n++;
+        return $n;
+
+    }
+    else{
+        return $n;
+    }
+});
+
+
+Route::get('/if2/{n}', function($n){
+    if($n>0){
+        $n++;
+        return $n;
+
+    }
+    else{
+        $n=$n-2;
+        return $n;
+    }
+});
+
+
+
+Route::get('/if3/{n}', function($n){
+    if($n>0){
+        $n++;
+        return $n;
+
+    }
+    elseif($n<0){
+        $n=$n-2;
+        return $n;
+    }
+    else{
+        return 10;
+    }
+});
+
+
+Route::get('/if4/{a}/{b}/{c}', function($a,$b,$c){
+    $d=0;
+    if($a>0){
+        $d++;
+    }
+    if($b>0){
+        $d++;
+    }
+    if($c>0){
+        $d++;
+    }
+    return $d;
+
+});
+
+
+Route::get('/if5/{a}/{b}/{c}', function($a,$b,$c){
+    $d=0;
+    $k=0;
+    if($a>0){
+        $d++;
+    }
+    if($b>0){
+        $d++;
+    }
+    if($c>0){
+        $d++;
+    }
+    return "musbatlar sonlar ".$d. "ta<br>";
+    if($a<0){
+        $k++;
+    }
+    if($b<0){
+        $k++;
+    }
+    if($c<0){
+        $k++;
+    }
+    return "manfiy sonlar ".$k. "ta";
+
+
+});
+
+
+
+Route::get('/if6/{a}/{b}', function($a, $b){
+    if($a>$b){
+        
+        return $a;
+
+    }
+    else{
+       
+        return $b;
+    }
+});
+
+Route::get('/if7/{a}/{b}', function($a, $b){
+    if($a>$b){
+        
+        return 2;
+
+    }
+    else{
+       
+        return 1;
+    }
+});
+
+
+Route::get('/if8/{a}/{b}', function($a, $b){
+    if($a>$b){
+        
+        return $a."<br>".$b;
+
+    }
+    else{
+       
+        return $b."<br>".$a;
+    }
+});
+
+
+Route::get('/if9/{a}/{b}', function($a, $b){
+    if($a>$b){
+        
+        return "A = ". $b."<br> B = ".$a;
+
+    }
+    else{
+       
+        return "A = ". $a."<br> B = ".$b;
+    }
+});
+
+Route::get('/if10/{a}/{b}', function($a, $b){
+    if($a==$b){
+        
+        return "A = 0 <br> B = 0";
+
+    }
+    else{
+        $n=$a+$b;
+       
+        return "A = ". $a."<br> B = ".$b."<br>Yig'indisi = ".$n;
+    }
+});
+
 ?>
